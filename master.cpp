@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <string>
 #include <deque>
 #include <queue>
 #include <numeric>
@@ -14,11 +15,13 @@ using graph = vector<vector<int>>;
 using vi = vector<int>;
 using ll = long long;
 
+#define all(x) x.begin(), x.end()
+
 using ll = long long;
 
 bool kun(int u, const graph& g, vector<int>& mt, vector<int>& vis) {
     if (vis[u]) {
-        return true;
+        return false;
     }
     vis[u] = true;
     for (int v : g[u]) {
