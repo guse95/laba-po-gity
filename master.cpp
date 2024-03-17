@@ -10,7 +10,6 @@
 #include <map>
 
 using namespace std;
-#define all(x) x.begin(), x.end()
 
 using graph = vector<vector<int>>;
 using vi = vector<int>;
