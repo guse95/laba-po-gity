@@ -21,37 +21,6 @@ const int N = 2e5;
 graph g;
 vi tin(N), tout(N);
 
-void dfs(int u, int prev, int& t) {
-    tin[u] = t++;
-    for (int v : g[u]) {
-        if (tin[v] == -1) {
-            dfs(v, u, t);
-        }
-    }
-    tout[u] = t++;
-}
-
-bool is_parent(int u, int v) {
-    return (tin[u] < tin[v]) && (tout[v] < tout[u]);
-}
-
-void bfs(int str, const graph& g, vi& d) {
-    queue<int> q;
-    d[str] = 0;
-    q.push(str);
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop();
-        for (int v : g[u]) {
-            if (d[v] != -1) {
-                continue;
-            }
-            d[v] = d[u] + 1;
-            q.push(v);
-        }
-    }
-}
-
 void bfs_2_0(int s, const graph& g, vector<set<str>>& d) {
     queue<int> q;
     q.push(s);
