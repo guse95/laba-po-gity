@@ -2,20 +2,18 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
-#include <string>
 #include <deque>
 #include <queue>
 #include <numeric>
 #include <set>
 #include <map>
 
+
 using namespace std;
 
 using graph = vector<vector<int>>;
 using vi = vector<int>;
 using ll = long long;
-
-#define all(x) x.begin(), x.end()
 
 using ll = long long;
 
