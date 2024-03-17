@@ -8,7 +8,6 @@
 #include <set>
 #include <map>
 
-
 using namespace std;
 
 using graph = vector<vector<int>>;
@@ -19,7 +18,7 @@ using ll = long long;
 
 bool kun(int u, const graph& g, vector<int>& mt, vector<int>& vis) {
     if (vis[u]) {
-        return false;
+        return true;
     }
     vis[u] = true;
     for (int v : g[u]) {
