@@ -77,9 +77,13 @@ void solve() {
         g[u].push_back(v);
     }
     vi colour(n, black);
-    if (!dfs(0, 0, g, colour)) {
-        cout << -1;
-        return;
+    for (int i = 0; i < n; ++i) {
+        if (colour[i] == black) {
+            if (!dfs(i, i, g, colour)) {
+                cout << -1;
+                return;
+            }
+        }
     }
     vector<int> mt(n, -1), vis(n);
     int ans = 0;
